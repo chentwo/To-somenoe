@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="gb2312">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>      </title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/.css" rel="stylesheet">
+  
   <style>
 
-	.copyright{
+	#footer{
 		text-align:center;
-		margin:50px;
+		margin-top:50px;
 	}
 	.tip{
 		visibility: hidden;
@@ -140,8 +140,21 @@
 	 $("#loginbtn").on("click",function(){//登录验证
 		 var telnum=$("#telnum").val();
 		 var password=$("#password1").val();
+		 if(telnum=="15933026255"){
+			 if(password=="77"){
+			 alert("准备！")
+		     window.location.href="index1.html";
+			 alert("success");
+			 }else{
+			   alert("暗号错了哟，问问聪明陈")
+		       $("#password1").focus();  
+			 };
+		 }else{
+		     alert("手机号错误，请重新输入")
+		     $("#telnum").focus();
+		 }
 		 
-	 })
+	 });
 	 
 	});
 	 
